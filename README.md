@@ -1,1 +1,1 @@
-# videoCDN
+# mongo-news-scraper

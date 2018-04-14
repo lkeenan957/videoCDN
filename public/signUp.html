@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Video Stream</title>
+        <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+<!-- Navigation -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Video Stream</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/plans">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+   <!--  Real page content -->
+    <div class="container">
+      <div class="row">
+        <h1>Sign Up Form</h1>
+      </div>
+      <div class="row">
+        <form>
+          <div class='form-group'>
+            <label for='fullName'>Full Name</label>
+            <input type='text' class='form-control' id='signName' placeholder='Full Name'>
+          </div>
+          <div class='form-group'>
+            <label for='signUpEmail'>Email address</label>
+            <input type='email' class='form-control' id='signUpEmailAddress' placeholder='Email'>
+          </div>
+          <div class='form-group'>
+            <label for='username'>Username</label>
+            <input type='text' class='form-control' id='username' placeholder='Username'>
+          </div>
+          <div class='form-group'>
+            <label for='signUpPassword'>Password</label>
+            <input type='password' class='form-control' id='signUpPassword' placeholder='Password'>
+          </div>
+      
+          <button type='button' class='btn btn-default' id='signUpSubmit'>Submit</button>
+            <!-- <button type='button' class='btn btn-default' data-dismiss='modal' VALUE='Back' onClick="window.location.href='login'">Close</button> -->
+            </form>
+
+        
+      </div>
+
+    </div>
+
+    <!--  Real page content -->
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="./app.js"></script>
+    <script src="./signUp.js"></script>
+  </body>
+</html>
