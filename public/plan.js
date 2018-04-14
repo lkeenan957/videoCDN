@@ -21,10 +21,48 @@
 
       if (res.data) {
         console.log(res)
+
+      //   var user: {
+      //   	username: "ryan",
+      //   	plan: "plan"
+      //   };
+
+      //   $.put("api/stripeUpdateUser", user).then(function(response){
+      //   	console.log(response);
+		    // if (!response.error) {
+		    //   alert("Your account has been updated with the plan");
+		    // } else {
+		    //   alert("Error: Your account wasnt updated!")
+		    // }
+      //   })
       }
       else if (res) {
         alert('Ohh no! Somethings wrong with your info or payment please try again.')
       }
     })
   }
+})
+
+//fired off on an ng-click an initiate my stripe api payment form
+$("#payPlan").on("click", function () {
+	var planPrice = '';
+	if(data_name == "5plan"){
+		planPrice == 5;
+	} else if(data_name == "10plan") {
+		planPrice == 10;
+	} else {
+		planPrice == 100;
+	}
+  handler.open({
+    name: 'VideoCDN',
+    email: "lkeenan@ddd.com",
+    description: 'Your Purchased' + data_name,
+    amount: planPrice * 100
+  });
+})
+
+
+// Close Checkout on page navigation: and by clicking form x
+window.addEventListener('popstate', function () {
+  handler.close();
 });

@@ -50,6 +50,8 @@ module.exports = function (app) {
 	////stripe / cart routes
 	app.post("/api/stripeCharge", stripeCtrl.charge)
 
+	app.put("/api/stripeUpdateUser/:username", stripeCtrl.updateStripePlanUser)
+
 
 	////JWPlayer routes
 

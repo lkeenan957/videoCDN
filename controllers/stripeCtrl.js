@@ -28,11 +28,30 @@ module.exports = {
         //this gives us a fresh slate
         req.session.order = [] //if charge then we clear session.order
         req.session.cart = []; //if charge then we clear session.cart
-        console.log("cool beans");
+        console.log("VideoCDN");
         const cool = "card was charged"
         res.json(cool) //testing in front end for this string to change view
       }
       // asynchronously called
     });
+  },
+  updateStripePlanUser: function (req, res, next) {
+    req.session.user.currentUser = req.body
+    var loggedUser = req.session.user.currentUser;
+    if (true) {
+      db.User.update({
+        plan: loggedUser.plan,
+        
+      }, {
+          where: {
+            username: req.params.username
+          }
+        }).then(function (UserData) {
+          res.json(UserData)
+        })
+    } else {
+      res.status(404).json("please log in to update profile")
+    }
   }
+}
 }
